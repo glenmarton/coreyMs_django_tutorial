@@ -1,6 +1,7 @@
 PROJ=django_project
 
 $(PROJ): venv
+	test $(PROJ) && touch $(PROJ)
 	./venv/bin/django-admin startproject $(PROJ)
 
 $(PROJ)/blog: $(PROJ) venv
